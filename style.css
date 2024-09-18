@@ -1,0 +1,276 @@
+:root{
+    /* color */
+    --veryDarkMagenta: hsl(300, 43%, 22%);
+    --softPink: hsl(333, 80%, 67%);
+    --darkGrayishMagenta: hsl(303, 10%, 53%);
+    --lightGrayishMagenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+
+    /* font size:15px , weight:400,500,700*/
+    --fontfamily: "League Spartan", sans-serif;
+
+    /* width mobile:375px , desktop:1440px */
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    /* border: solid 1px #ccc; */
+}
+
+html,body{
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fontfamily);
+    position: relative;
+}
+
+body::before{
+    content: "";
+    background-image: url(https://raw.githubusercontent.com/tina801005/challenge14/0b21d3ca57f61d337fb35ff287e70a64b30e1b80/images/bg-pattern-top-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+body::after{
+    content: "";
+    background-image: url(https://raw.githubusercontent.com/tina801005/challenge14/0b21d3ca57f61d337fb35ff287e70a64b30e1b80/images/bg-pattern-bottom-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.container{
+    max-width: 100%;
+}
+
+.socialproofPage{
+    max-width: 100%;
+    padding: 2rem 10rem;
+
+}
+.pageTop{
+    display: flex;
+    justify-content: space-around;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 30%;
+    gap: 1rem;
+}
+.introTitle{
+    font-size: 3rem;
+    color: var(--veryDarkMagenta);
+}
+.introContent{
+    font-size: 1rem;
+    line-height: 1.4rem;
+    font-weight: 500;
+    color: var(--darkGrayishMagenta);
+}
+
+.starRateBoard{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    gap: 1rem;
+    padding-left: 18rem;
+}
+.starRate{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding:  0.9rem 1rem ;
+    border-radius: 0.5rem;
+    background-color: var(--lightGrayishMagenta);
+}
+
+.star{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+#line1{
+    padding-right: 3rem;
+    padding-left: 1.5rem;
+    align-items: center;
+    align-self: first baseline;
+}
+
+#line2{
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    align-items: center;
+    align-self: center;
+}
+
+#line3{
+    padding-right: 3rem;
+    padding-left: 1.5rem;
+    align-items: center;
+    align-self:last baseline;
+}
+.rateTitle{
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--veryDarkMagenta);
+}
+
+.pageBottom{
+    display: flex;
+    max-width: 100%;
+    margin-top: 3rem;
+    position: relative;
+}
+
+#review2{
+    position: absolute;
+    top: 5%;
+    left: 33.5%;
+}
+#review3{
+    position: absolute;
+    top: 13%;
+    right: 2%;
+}
+.buyerReview{
+    max-width: 31%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--veryDarkMagenta);
+}
+.buyer{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.buyerImage{
+    max-width: 100%;
+    border-radius: 50%;
+    width:12%;
+    border: none;
+}
+
+.bueyrInfor{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.buyerName{
+    color: var(--White);
+    font-weight: 700;
+}
+.buyerStatus{
+    color:var(--softPink);
+}
+
+.reviewContent{
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: var(--White);
+}
+
+@media screen and (max-width:1440px) {
+    .socialproofPage{
+        padding: 5rem;
+    }
+    .starRateBoard{
+        padding-left: 10rem;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .starRateBoard{
+        padding-left: 2rem;
+    }
+}
+
+@media screen  and (max-width:600px){
+    body{
+        padding: 4rem 1rem;
+    }
+    body::before{
+        background-image: url(https://raw.githubusercontent.com/tina801005/challenge14/0b21d3ca57f61d337fb35ff287e70a64b30e1b80/images/bg-pattern-top-mobile.svg);
+        width: 100%;
+    }
+    body::after{
+        background-image: url(https://raw.githubusercontent.com/tina801005/challenge14/0b21d3ca57f61d337fb35ff287e70a64b30e1b80/images/bg-pattern-bottom-desktop.svg);
+        width: 100%;
+        height: 15%;
+        top: 85%;
+    }
+    .socialproofPage{
+        padding: 1rem;
+    }
+    .pageTop{
+        flex-direction: column;
+    }
+    .intro{
+        max-width: 100%;
+    }
+    .introTitle{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    .introContent{
+        text-align: center;
+    }
+    .starRateBoard{
+        max-width: 100%;
+        padding: 1rem 0;
+    }
+    .starRate{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    #line1,#line2,#line3{
+        align-self: center;
+    }
+
+    .pageBottom{
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 2rem;
+        position: static;
+    }
+    #review2,#review3{
+        position: static;
+    }
+    .buyerReview{
+        max-width: 100%;
+    }
+}
